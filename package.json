@@ -1,0 +1,17 @@
+{
+    "name": "oss-chunk-upload",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+      "frontend",
+      "server"
+    ],
+    "scripts": {
+      "dev": "concurrently \"cd frontend && npm run dev\" \"cd server && npm run dev\"",
+      "build": "concurrently \"cd frontend && npm run build\" \"cd server && npm run build\"",
+      "start": "node server/handler.js"
+    },
+    "devDependencies": {
+      "concurrently": "^8.2.2"
+    }
+  }
